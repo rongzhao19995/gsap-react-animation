@@ -71,7 +71,7 @@ const memberPage = () => {
 
   // Animation for fading in
   const fadeIn = element => {
-    gsap.to(element, animationSpeed, { opacity: 1, y: 20, ease: animationTimingOut, stagger: { amount: 0.8 }, delay: 1 }) };
+    gsap.to(element, animationSpeed, { opacity: 1, y: 20, ease: animationTimingOut, stagger: { amount: 0.8 } }) };
 
   // Animation for fading out
   const fadeOut = element => {

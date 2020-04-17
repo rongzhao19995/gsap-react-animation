@@ -16,7 +16,7 @@ const LandingPage = ({onClick}) => {
 
     setTimeout(() => {
       onClick();
-    }, 4000);
+    }, 4200);
   }
     
   useEffect(() => {
@@ -24,16 +24,13 @@ const LandingPage = ({onClick}) => {
     /// Animation on Entering
     t1.staggerTo('.hidden-bg', animationSpeed, { width: '100%', ease: easeInOut }, 0.15)
     .staggerFromTo(['.text-wrapper', '.airdrop-wrapper'], animationSpeed, { x: -100, opacity: 0, ease: animationTimingIn }, { x: 0, opacity: 1, ease: animationTimingOut }, 0.15)
-    .fromTo('.pulse-loader-wrapper', animationSpeed, { y: 100, opacity: 0, ease: animationTimingIn }, { y: 0, opacity: 1, ease: animationTimingOut }, '-=0.3')
-    .to('.text-wrapper', animationSpeed, { opacity: 0, ease: animationTimingOut}, 0.1)
-    .to('.airdrop-wrapper', animationSpeed, { opacity: 0, ease: animationTimingOut}, 0.1)
-    .to('.pulse-loader-wrapper', animationSpeed, { opacity: 0, ease: animationTimingOut}, 0.1)
-    .to('.revealer',1.5, {css:{scale:300, opacity:1, rotation: 180},delay: 1, onComplete: handleClosing()});
-    t1.play();
+    .fromTo('.spinner-loader-wrapper', animationSpeed, { y: 100, opacity: 0, ease: animationTimingIn }, { y: 0, opacity: 1, ease: animationTimingOut }, '-=0.3')
 
-    // ///  Animation on Leaving
-    // t2.staggerTo(['.text-wrapper', '.airdrop-wrapper', '.pulse-loader-wrapper'], animationSpeed, { opacity: 0, ease: animationTimingOut }, 0.2)
-    // .to('.revealer',1.5, {css:{scale:300, opacity:1, rotation: 180}}, 0.2)
+    .to('.airdrop-wrapper', animationSpeed, { opacity: 0, ease: animationTimingOut}, 0.1)
+    .to('.spinner-loader-wrapper', animationSpeed, { opacity: 0, delay:.5, ease: animationTimingOut})
+    .to('.text-wrapper', animationSpeed, { opacity: 0, ease: animationTimingIn}, 0.1)
+    .to('.revealer',1.5, {css:{scale:300, opacity:1, rotation: 180}, onComplete: handleClosing()});
+    t1.play();
 
   }, []);
 
@@ -46,10 +43,11 @@ const LandingPage = ({onClick}) => {
         <div className="landing-page">
           <div className="revealer"></div>
           <div className="main-container">
-            <div className="pulse-loader-wrapper">
-            <div className="pluse-loader ping">
-              <div className="pluse-loader ping"></div>
-            </div>
+            <div className="spinner-loader-wrapper">
+                <div className="spinner">
+                <div className="double-bounce1"></div>
+                <div className="double-bounce2"></div>
+              </div>
             </div>
             <div className="airdrop-wrapper">
               <div className="airdrop">
@@ -57,8 +55,8 @@ const LandingPage = ({onClick}) => {
               </div>
             </div>
             <div className="text-wrapper">
-              <h5>Welcome</h5>
-              <h1 className="large">Wait a bit</h1>
+              <div className="small">Welcome</div>
+              <div className="large">Wait a bit</div>
             </div>
           </div>
         </div>

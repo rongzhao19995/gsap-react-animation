@@ -28,6 +28,7 @@ const commentPage = () => {
   ];
 
   // gsap variable
+  const t1 = gsap.timeline({ paused: true });
   const animationSpeed = 0.75;
   const animationTimingIn = Expo.easeIn;
   const animationTimingOut = Expo.easeOut;
@@ -53,9 +54,9 @@ const commentPage = () => {
 
   useEffect(() => {
 
-    
-    gsap.from(animateText, animationSpeed, {opacity: 0, y: 20, ease: animationTimingIn});
-    gsap.from(animateBtn, animationSpeed, {opacity: 1, scale: 0, ease: animationTimingIn}, -.55);
+    t1.staggerFromTo([animateText, animateBtn], animationSpeed, { x: -100, opacity: 0, ease: animationTimingIn }, { x: 0, opacity: 1, ease: animationTimingOut }, 0.15);
+    t1.play();
+  
   }, [textObj]);
 
 

@@ -15,7 +15,6 @@
   scroll-behavior: smooth;
  }
 
-
 //------------------------------------------------------------ Mics ---------------------------------------------------------------------
 //---------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -110,13 +109,15 @@
     display:flex;
     justify-content: start;
 
-    @media screen and (max-width: $phone) {
+    // sm - mobile
+    @media screen and (min-width: $phone) and (max-width: $tablet) {
       padding-top: 10px;
       display:block;
     }
 
-    @media screen and (max-width: $web) {
-      padding-top:15px;
+    // md- tablet
+    @media screen and (min-width: $tablet) and (max-width: $web){
+      padding:15px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -146,34 +147,16 @@
 
   .nav-opt {
     display:flex;
-    justify-content: flex-end;
-
-    .mobile-nav-bar {
-
-      @media screen and (max-width: $phone) {
-        justify-content: center;
-        align-items: center;
-      }
-
-      @media screen and (max-width: $tablet) {
-        justify-content: center;
-        align-items: center;
-      }
-      
-
-    }
+    justify-content: center;
 
     .nav-item {
       padding:30px 25px;
       cursor: pointer;
 
-
-      @media screen and (max-width: $phone) {
+      // sm ~ md- mobile ~ tablet
+      // reason being is that some mobile screen on landscape is bigger than ipad width.
+      @media screen and (max-width: $web) {
         padding: 10px 10px;
-      }
-  
-      @media screen and (max-width: $tablet) {
-        padding: 5px 10px;
       }
   
       a {
@@ -206,6 +189,103 @@
 
 }
 
+.nav-bar-mobile {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  .nav-logo {
+    justify-content: center;
+    padding: 35px;
+
+    .airdrop-wrapper {
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      padding: 10px;
+    
+      .airdrop {
+        background-color: #231f20;
+        border-radius: 50px 50px 0px 50px;
+        width: 50px;
+        height: 50px;
+    
+        p {
+          padding: 20px 12px;
+          color: $white;
+        }
+    
+      }
+  
+    }
+
+    .hamburger-container {
+      position: fixed;
+      top: 4%;
+      right: 5%;
+      height: 27px;
+      width: 35px;
+      cursor: pointer;
+      z-index: 100;
+      transition: opacity .25s ease;
+      
+      &:hover {
+        opacity: .7;
+      }
+      
+      &.active {
+        .top {
+          transform: translateY(11px) translateX(0) rotate(45deg);
+        }
+        .middle {
+          opacity: 0;
+        }
+        
+        .bottom {
+          transform: translateY(-11px) translateX(0) rotate(-45deg);
+        }
+      }
+      
+      span {
+      background: $cyan;
+      border: none;
+      height: 5px;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition:  all .35s ease;
+      cursor: pointer;
+        
+        &:nth-of-type(2) {
+          top: 11px;
+        }
+        
+        &:nth-of-type(3) {
+          top: 22px;
+        }
+
+      }
+
+    }
+    
+  }
+
+  .nav-opt {
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 0vh;
+    display: none;
+
+    .nav-item {
+      padding: 30px;
+    }
+
+  }
+
+}
 
 //------------------------------------------------------------    Footer  ---------------------------------------------------------------------
 //---------------------------------------------------------------------------------------------------------------------------------------------
@@ -234,7 +314,6 @@
       
         &:hover {
           transform: scale(1.1);
-
         }
 
       }
@@ -283,7 +362,6 @@
   
       }
 
-
     }
 
   }
@@ -302,6 +380,7 @@
         color: inherit;
         text-decoration: none;
       }
+
     }
 
   }
@@ -319,7 +398,6 @@
     justify-content: center;
   }
 
-
 }
 
 //------------------------------------------------------------    Card Page  ---------------------------------------------------------------------
@@ -329,7 +407,6 @@
   display:flex;
   flex-direction:row;
   padding: 10px;
-  // opacity: 1;
 
   .content-left{
     padding:15px;
@@ -348,7 +425,6 @@
 
       .cont-header {
         text-transform: uppercase;
-
       }
 
     }
@@ -382,7 +458,6 @@
     }
 
   }
-
 
 }
 
@@ -418,10 +493,11 @@
     .icon-right {
       padding:20px;
 
+      // sm- mobile
       @media screen and (max-width: $phone) {
         padding: 20px 5px;
       }
-  
+
     }
 
     span{
@@ -450,11 +526,13 @@
       align-items: center;
       text-align:center;
       
+      // sm- mobile
       @media screen and (max-width: $phone) {
         padding-bottom: 25px;
       }
 
-      @media screen and (max-width: $tablet) {
+      // md- tablet
+      @media screen and (min-width: $phone) and (max-width: $tablet) {
         padding-bottom: 20px;
       }
 
@@ -703,12 +781,14 @@
         height: 250px;
         transition:.5s;
   
+        // sm- mobile
         @media screen and (max-width: $phone) {
           height: 200px;
         }
 
-        @media screen and (max-width: $tablet) {
-          height: 200px;
+        // md- tablet
+        @media screen and (min-width: $phone) and (max-width: $tablet) {
+          height: 250px;
         }
 
       }
@@ -817,8 +897,6 @@
   .view-btn {
     padding:10px 35px;
 
-
-
     @media screen and
     (min-device-width: $iphoneMinWidth)and 
     (max-device-width:$iphoneMaxWidth) and
@@ -918,7 +996,6 @@
   
       span {
         font-size:2rem;
-        
       }
 
     }
@@ -1002,7 +1079,6 @@
       border-radius: 4px;
 
       .input-fields-wrapper {
-
       }
   
       .msg-btn-wrapper {
@@ -1047,9 +1123,17 @@
     background: url(../images/landing.png) no-repeat;
     background-size: cover;
 
-    // @media screen and (max-width: $phone) {
-    //   background: url(../images/landingmobile.png) no-repeat;
-    // }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-image: linear-gradient(to right bottom, #0d1218, #091316, #0a1313, #0d1310, #11120e);
+      opacity: .6; 
+    }
 
   }
 
@@ -1073,7 +1157,7 @@
 
 .landing-page {
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   background-image: linear-gradient(to right top, #333333, #343434, #353535, #363636, #373737, #404040, #494949, #525252, #676767, #7d7d7d, #939393, #aaaaaa);
 
 
@@ -1083,29 +1167,36 @@
     height: 100vh;
     width: 100%;
 
-    .pulse-loader-wrapper {
+    .spinner-loader-wrapper {
       position: fixed;
-      top: 40%;
-      left: 45%;
-    
-      @media screen and (max-width: $phone) {
-        position: absolute;
-        top: 30%;
-        left: 28%;
+      top: 50%;
+      left: 45%;    
+
+      .spinner {
+        width: 40px;
+        height: 40px;
+      
+        .double-bounce1, .double-bounce2 {
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          background-color: $cyan;
+          opacity: 0.6;
+          position: absolute;
+          top: 0;
+          left: 0;
+          
+          -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+          animation: sk-bounce 2.0s infinite ease-in-out;
+        }
+  
+        .double-bounce2 {
+          -webkit-animation-delay: -1.0s;
+          animation-delay: -1.0s;
+        }
+
       }
 
-      // @media screen and (max-width: $tablet) {
-      //   position: absolute;
-      //   top: 30%;
-      //   left: 70%;
-      // }
-      
-      .pluse-loader {
-        background-color: #3e3e3e;
-        border-radius:50%;
-        width: 160px;
-        height: 160px;
-      }
     }
 
     .airdrop-wrapper {
@@ -1142,44 +1233,60 @@
       position: absolute;
       bottom: 0;
       padding: 50px 100px;
+      font-size: 2rem;
+      color: $white;
 
+      // sm- mobile
       @media screen and (max-width: $phone) {
-        padding: 0px 50px;
-        bottom:0%;
-        color: white;
+        padding: 25px 50px;
+        bottom: 0%;
       }
 
-      @media screen and (max-width: $tablet) {
-        padding: 50px 50px;
-        bottom: 5%;
+      // md- tablet
+      @media screen and (min-width: $phone) and (max-width: $tablet) {
+        padding: 0px 50px;
+        bottom: 0%;
+      }
+
+      .small {
+        font-size: 1.5em;
+
+
+        // sm ~ md- mobile ~ tablet
+        // reason being is that some mobile screen on landscape is bigger than ipad width.
+        @media screen and (max-width: $web) {
+          font-size: 0.8em;
+        }        
+
       }
 
       .large {
-        font-size: 4.5rem;
+        font-size: 2.5em;
 
-        @media screen and (max-width: $phone) {
-          font-size: 3.5rem;
+        // sm ~ md- mobile ~ tablet
+        // reason being is that some mobile screen on landscape is bigger than ipad width.
+        @media screen and (max-width: $web) {
+          font-size: 1.5em;
         }
-  
+
       }
+
     }
 
   }
 
 }
 
+//------------------------------------------------------------    Keyframe Animation  ---------------------------------------------------------------
+//---------------------------------------------------------------------------------------------------------------------------------------------------
 
 
+.fade-in{-webkit-animation:fade-in 0.2s cubic-bezier(.39,.575,.565,1.000) both;animation:fade-in 1.5s cubic-bezier(.39,.575,.565,1.000) both}
+.ping{-webkit-animation:ping 1.5s ease-in-out infinite both;animation:ping 1.5s ease-in-out infinite both}
+.scale-up-center{-webkit-animation:scale-up-center .1s cubic-bezier(.39,.575,.565,1.000) both;animation:scale-up-center .4s cubic-bezier(.39,.575,.565,1.000) both}
 
-/* ----------------------------------------------
- * Generated by Animista on 2020-4-13 19:23:19
- * Licensed under FreeBSD License.
- * See http://animista.net/license for more info. 
- * w: http://animista.net, t: @cssanimista
- * ---------------------------------------------- */
- .fade-in{-webkit-animation:fade-in 2s cubic-bezier(.39,.575,.565,1.000) both;animation:fade-in 1.5s cubic-bezier(.39,.575,.565,1.000) both}
- .ping{-webkit-animation:ping 1.5s ease-in-out infinite both;animation:ping 1.5s ease-in-out infinite both}
-
- 
 @-webkit-keyframes fade-in{0%{opacity:0}100%{opacity:1}}@keyframes fade-in{0%{opacity:0}100%{opacity:1}}
 @-webkit-keyframes ping{0%{-webkit-transform:scale(.2);transform:scale(.2);opacity:.8}80%{-webkit-transform:scale(1.2);transform:scale(1.2);opacity:0}100%{-webkit-transform:scale(2.2);transform:scale(2.2);opacity:0}}@keyframes ping{0%{-webkit-transform:scale(.2);transform:scale(.2);opacity:.8}80%{-webkit-transform:scale(1.2);transform:scale(1.2);opacity:0}100%{-webkit-transform:scale(2.2);transform:scale(2.2);opacity:0}}
+@-webkit-keyframes scale-up-center{0%{-webkit-transform:scale(.5);transform:scale(.5)}100%{-webkit-transform:scale(1);transform:scale(1)}}@keyframes scale-up-center{0%{-webkit-transform:scale(.5);transform:scale(.5)}100%{-webkit-transform:scale(1);transform:scale(1)}}
+@-webkit-keyframes sk-bounce {0%, 100% { -webkit-transform: scale(0.0) }50% { -webkit-transform: scale(1.0) }}
+@keyframes sk-bounce {0%, 100% { transform: scale(0.0);-webkit-transform: scale(0.0);} 50% { transform: scale(1.0);-webkit-transform: scale(1.0);}}

@@ -1,7 +1,7 @@
 // Breakpoints Variables
-$phone: 425px;
-$tablet: 766px;
-$web: 1023px;
+$phone: 576px;
+$tablet: 768px;
+$web: 992px;
 
 $ipadMinWidth: 768px;
 $ipadMaxWidth: 1024px;
@@ -16,6 +16,7 @@ $nav-height: 70px;
 $nav-background: #f0f0f0;
 $nav-font-color: #353434;
 $link-hover-color: #2581DC;
+$ham-main: #1abc9c;
 
 $white: #ffffff;
 $white-dark: #e3e3e3;
@@ -28,4 +29,55 @@ $gray-smooth-2: #606060;
 $gray-dark: #383838;
 $gray-heavy: #333333;
 
+
+
+// Assign new boostrap default primary theme
 $primary: $cyan;
+
+
+//  Templates Media Query
+// lg
+@media (min-width: 992px) {}
+
+// md
+@media (min-width: 768px) {}
+
+// sm
+@media (min-width: 576px) {}
+
+
+// sm- mobile
+@media screen and (max-width: $phone) {}
+
+// md- tablet
+@media screen and (min-width: $phone) and (max-width: $tablet) {}
+
+// lg- web and above
+@media screen and (min-width: $tablet) {}
+
+
+//  Templates Media Query
+// IPhone Portait
+@media screen and
+(min-device-width: $iphoneMinWidth)and 
+(max-device-width:$iphoneMaxWidth) and
+(orientation : portrait) {
+}
+
+// IPhone Landscape
+@media screen and
+(min-device-width: $iphoneMinWidth)and 
+(max-device-width:$iphoneMaxWidth) and
+(orientation : landscape) {}
+
+// IPad Portait
+@media screen and
+(min-device-width: $ipadMinWidth)and 
+(max-device-width:$ipadMaxWidth) and
+(orientation : portrait) {}
+
+// IPad Landscape
+@media screen and
+(min-device-width: $ipadMinWidth)and 
+(max-device-width:$ipadMaxWidth) and
+(orientation : landscape) {}

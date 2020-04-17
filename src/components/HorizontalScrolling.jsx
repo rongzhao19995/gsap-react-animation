@@ -8,8 +8,6 @@ import partner4 from "../images/partner4.png";
 import iconLeft from "../images/icon-left.png";
 import iconRight from "../images/icon-right.png";
 
-// One item component
-// selected prop will be passed
 
 const MenuItem = ({ text, selected, img }) => {
   return (
@@ -21,8 +19,6 @@ const MenuItem = ({ text, selected, img }) => {
   );
 };
 
-// All items component
-// Important! add unique key
 export const Menu = (list, selected) =>
   list.map((el) => {
     return (

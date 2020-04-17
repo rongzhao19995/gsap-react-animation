@@ -16,8 +16,7 @@ const Footer = () => {
           <Container>
             <div className="footer-text">
               <a href="https://facebook.com/" target="_blank">
-                Copyright © 2017 APD Digital Services Sdn Bhd, All Rights
-                Reserved.
+                Copyright © 2017 APD Digital Services Sdn Bhd, All Rights Reserved.
               </a>
             </div>
           </Container>
