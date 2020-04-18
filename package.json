@@ -20,6 +20,8 @@
   "dependencies": {
     "bootstrap": "^4.4.1",
     "emailjs-com": "^2.4.1",
+    "express": "^4.16.3",
+    "express-favicon": "^2.0.1",
     "gsap": "^3.2.6",
     "jquery": "^3.5.0",
     "react": "^16.8.6",
@@ -27,8 +29,7 @@
     "react-dom": "^16.8.6",
     "react-hook-form": "^5.3.1",
     "react-horizontal-scrolling-menu": "^0.7.7",
-    "react-use": "^14.1.1",
-    "express": "^4.16.3"
+    "react-use": "^14.1.1"
   },
   "devDependencies": {
     "@babel/core": "^7.5.0",

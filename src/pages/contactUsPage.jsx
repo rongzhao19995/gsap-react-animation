@@ -4,6 +4,7 @@ import * as emailjs from "emailjs-com";
 
 const contactUsPage = () => {
 
+  let messageDisplay;
   const [show, setShow] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(false);
   
@@ -55,6 +56,7 @@ const contactUsPage = () => {
         setSubmitStatus(true);
         handleShow();
       })
+
       // Handle errors here however you like, or use a React error boundary
       .catch((err) =>
         console.error(
@@ -64,7 +66,8 @@ const contactUsPage = () => {
       );
   };
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+  },[]);
 
   return (
     <section id="sec6">
@@ -75,7 +78,7 @@ const contactUsPage = () => {
               <Modal.Title>Glad u find us</Modal.Title>
             </Modal.Header>
             <Modal.Body className="contact-modal-body">
-              Thanks you for contacting us!
+            {submitStatus ? 'Thanks you for contacting us!' : 'Thanks you but u submmited twice!'}
             </Modal.Body>
             <Modal.Footer>
               <Button onClick={handleClose}  className="btn-primary">

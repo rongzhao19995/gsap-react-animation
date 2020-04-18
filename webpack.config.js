@@ -87,7 +87,8 @@ module.exports = {
       // plugin for inserting scripts automatically into html
       template: './src/index.html',
       filename: 'index.html',
-      title: 'ReactJs Webpack'
+      title: 'ReactJs Webpack',
+      favicon: "./src/favicon.ico"
     }),
     new MiniCssExtractPlugin({
       // plugin for controlling how compiled css will be outputted and named
