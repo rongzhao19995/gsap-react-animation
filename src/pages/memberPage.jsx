@@ -3,10 +3,10 @@ import { useIntersection } from "react-use";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import {gsap, Expo, Circ, Power4  } from "gsap";
 
-import u1 from "../images/avatar1.jpg";
-import u2 from "../images/avatar2.jpg";
-import u3 from "../images/avatar3.jpg";
-import u4 from "../images/avatar4.jpg";
+import u1 from "../images/avatar1.webp";
+import u2 from "../images/avatar2.webp";
+import u3 from "../images/avatar3.webp";
+import u4 from "../images/avatar4.webp";
 
 import gc1 from "../images/groupContact.png";
 
@@ -22,7 +22,7 @@ const CardSection = ({ img, name, pos, phone, email }) => {
   return (
     <Col xs={11} md={5} lg={3}>
       <Card className="member-card member-fadeIn">
-        <Card.Img variant="top" src={img} />
+        <Card.Img variant="top" src={img}  alt={pos}/>
         <div className="overlay-info">
           <img src={gc1} alt=""/>
         </div>

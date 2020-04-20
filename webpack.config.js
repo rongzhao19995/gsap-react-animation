@@ -50,7 +50,7 @@ module.exports = {
       },
       {
         // config for images
-        test: /\.(png|svg|jpg|jpeg|gif)$/,
+        test: /\.(png|svg|jpg|jpeg|gif|webp)$/,
         use: [
           {
             loader: 'file-loader',
