@@ -3,13 +3,13 @@
 
 ## 🕹 Features
 This project is buit with the followings framework/ libary:
-[reactJs](https://github.com/facebook/react)
-[bootstrap4](https://github.com/twbs/bootstrap)
-[gsap](https://github.com/greensock/GSAP)
-[emailJs](https://github.com/eleith/emailjs)
-[express](https://github.com/expressjs/express)
-[react-use](https://github.com/streamich/react-use)
-[weback](https://github.com/webpack/webpack)
+[reactJs](https://github.com/facebook/react) <br>
+[bootstrap4](https://github.com/twbs/bootstrap)<br>
+[gsap](https://github.com/greensock/GSAP)<br>
+[emailJs](https://github.com/eleith/emailjs)<br>
+[express](https://github.com/expressjs/express)<br>
+[react-use](https://github.com/streamich/react-use)<br>
+[weback](https://github.com/webpack/webpack)<br>
 
 
 ## Available Scripts
