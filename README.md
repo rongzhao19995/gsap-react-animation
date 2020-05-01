@@ -1,7 +1,7 @@
 
 # React + GSAP Transitions 💕
 
-
+## 🕹 Features
 This project is buit with the followings framework/ libary:
 [reactJs](https://github.com/facebook/react)
 [bootstrap4](https://github.com/twbs/bootstrap)
@@ -38,7 +38,7 @@ Your app is ready to be deployed!
 Runs the app in development / production mode using Webpack dev server. Open [http://localhost:8080](http://localhost:8080) 🎉 to view it in the browser.<br />
 
 
-## Demo 
+## Demo  🎮 
 
 [Click Me](https://gsap-react-animation.herokuapp.com/)
 
