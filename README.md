@@ -2,7 +2,7 @@
 # React + GSAP Transitions 💕
 
 ## 🕹 Features
-This project is buit with the followings framework/ libary:
+This project is buit with the followings framework/ libary: <br>
 [reactJs](https://github.com/facebook/react) <br>
 [bootstrap4](https://github.com/twbs/bootstrap)<br>
 [gsap](https://github.com/greensock/GSAP)<br>
