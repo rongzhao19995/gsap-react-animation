@@ -1,3 +1,9 @@
+<p align="center">
+  <img src="https://raw.githubusercontent.com/rongzhao19995/gsap-react-animation/master/landingPage-2.png" alt="drawing" width="1000" />
+</p>
+
+
+<h2 align="center">Business Website</h2>
 
 # React + GSAP Transitions 💕
 
