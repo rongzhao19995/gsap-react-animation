@@ -20,7 +20,7 @@
   "dependencies": {
     "bootstrap": "^4.4.1",
     "emailjs-com": "^2.4.1",
-    "express": "^4.16.3",
+    "express": "^4.17.3",
     "express-favicon": "^2.0.1",
     "gsap": "^3.2.6",
     "jquery": "^3.5.0",
